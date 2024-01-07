@@ -1,25 +1,112 @@
-input:not([type='checkbox'], [type='radio']),
-select,
-textarea {
-  width: 50%;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e2e2e2;
+  background-image: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: #333;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 100vh;
+  margin: 0;
+  text-align: center;
 }
-h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+#title,
+#result {
+  color: #fff;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px #0005;
+  margin: 30px;
 }
+#subtitle {
+  color: #fff;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px #0005;
+  margin: 30px;
+}
+.form-holder {
+  background-color: #ffffffdd;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 300px;
+  margin: 4rem auto;
+}
+
 form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 15px;
 }
-#result {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 label {
-  align-items: left;
-  justify-content: left;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+input[type='date'],
+input[type='submit'] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+input[type='date'] {
+  background-color: #f9f9f9;
+}
+
+input[type='submit'] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+input[type='submit']:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+input[type='submit']:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  body {
+    background-image: linear-gradient(135deg, #a777e3, #6e8efb);
+  }
+
+  #title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .form-holder {
+    padding: 20px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  #title {
+    font-size: 1.5rem;
+  }
+
+  .form-holder {
+    padding: 15px;
+  }
+
+  form {
+    gap: 10px;
+  }
+
+  input[type='date'],
+  input[type='submit'] {
+    font-size: 0.9rem;
+  }
 }
