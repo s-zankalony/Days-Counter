@@ -81,7 +81,8 @@ input[type='submit']:active {
     background-image: linear-gradient(135deg, #a777e3, #6e8efb);
   }
 
-  #title {
+  #title,
+  #result {
     font-size: 2rem;
     margin-bottom: 20px;
   }
@@ -93,7 +94,8 @@ input[type='submit']:active {
 }
 
 @media (max-width: 400px) {
-  #title {
+  #title,
+  #result {
     font-size: 1.5rem;
   }
 
