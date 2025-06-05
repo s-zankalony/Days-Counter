@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const btn = document.getElementById('btn');
+  const form = document.getElementById('form');
 
-  btn.addEventListener('click', function countDays(e) {
+  form.addEventListener('submit', function countDays(e) {
     e.preventDefault();
     var today = new Date();
     var specificDate = new Date(document.getElementById('date').value);
