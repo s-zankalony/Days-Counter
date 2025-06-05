@@ -1,3 +1,10 @@
+/* Ensure consistent box sizing across elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #e2e2e2;
@@ -6,7 +13,7 @@ body {
   /* display: flex; */
   /* justify-content: center; */
   /* align-items: center; */
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   text-align: center;
 }
@@ -48,6 +55,7 @@ label {
 
 input[type='date'],
 input[type='submit'] {
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ddd;
@@ -90,6 +98,7 @@ input[type='submit']:active {
   .form-holder {
     padding: 20px;
     max-width: 90%;
+    margin-top: 2rem;
   }
 }
 
@@ -101,6 +110,7 @@ input[type='submit']:active {
 
   .form-holder {
     padding: 15px;
+    margin-top: 1rem;
   }
 
   form {
